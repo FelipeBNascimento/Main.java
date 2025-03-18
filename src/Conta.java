@@ -19,9 +19,7 @@ public class Conta {
     public double getSaldo(){
         return saldo;
     }
-    public void setSaldo(double saldo) {
-        saldo = saldo;
-    }
+
 
     public double getDepositaValor() {
         return depositaValor;
@@ -55,6 +53,14 @@ public class Conta {
         }else{
             System.out.println("Valor indisponível.");
         }
+
+    }
+
+    public void transferirValor(double valor,  Conta contaFinal){
+
+        this.sacarValor(valor);
+        contaFinal.depositarValor(valor);
+
 
     }
     public void mostrarinformacao(){

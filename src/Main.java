@@ -26,7 +26,7 @@ public class Main {
                 int entraMenuNasContas = scanner.nextInt();
 
                 if (entraMenuNasContas == 1) {
-                    System.out.println("Digite\n 1. Para saldo\n 2. Para depositar\n 3. Para sacar ");
+                    System.out.println("Digite\n 1. Para saldo\n 2. Para depositar\n 3. Para sacar \n 4. Transferir ");
                     int entraMenuContaConrrente = scanner.nextInt();
                     if (entraMenuContaConrrente == 1) {
                         contaCorrente.mostrarinformacao();
@@ -38,11 +38,17 @@ public class Main {
                         System.out.println("Informe o valor que deseja sacar: ");
                         double valorparaSacar = scanner.nextDouble();
                         contaCorrente.sacarValor(valorparaSacar);
-                    } else {
+                    }else if(entraMenuContaConrrente ==4) {
+
+                        System.out.println("Informe o valor que deseja Transferir para conta poupança");
+                        double valor = scanner.nextDouble();
+                        contaCorrente.transferirValor(valor, contaPoupanca);
+
+                    }else {
                         System.out.println("Saindo");
                     }
                 }else if (entraMenuNasContas == 2) {
-                     System.out.println("Digite\n 1. Para saldo\n 2. Para depositar\n 3. Para sacar\n 4. Para ver rendimento");
+                     System.out.println("Digite\n 1. Para saldo\n 2. Para depositar\n 3. Para sacar\n 4. Para ver rendimento \n 5. Para transferir");
                      int entraMenuContaPoupanca = scanner.nextInt();
                      if (entraMenuContaPoupanca == 1){
                          System.out.println("Saldo atualizado: "+ contaPoupanca.rendimento());
@@ -56,6 +62,12 @@ public class Main {
                          contaPoupanca.sacarValor(valorParaSacar);
                      }else if (entraMenuContaPoupanca==4){
                          System.out.println("O rendimento foi  de: "+ contaPoupanca.somenteRendimento());
+                     }else if (entraMenuContaPoupanca ==5){
+
+                         System.out.println("Informe o valor a transferir para conta corrente");
+                         double valor = scanner.nextDouble();
+                         contaPoupanca.transferirValor(valor, contaCorrente);
+
                      }else{
                          System.out.println(("Saindo"));
                      }
@@ -96,9 +108,6 @@ public class Main {
         listaDeContas.add(contaPoupanca);
         listaDeContas.add(contaCorrente);
         System.out.println(listaDeContas);
-
-
-
 
     }// Fechando o public statc void main
 }// Fechando a classe main
