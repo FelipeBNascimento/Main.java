@@ -1,27 +1,30 @@
+import Contas.Poupanca;
+import Contas.Selic;
+
 import java.util.Scanner;
 import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
 
-        // Criando um objeto para cada classe Conta corrente, Conta poupança e Conta Selic
-        Conta contaCorrente = new Conta("Felipe Bazan");
-        Poupanca contaPoupanca = new Poupanca("Felipe Bazan");
-        Selic contaSelic = new Selic("Felipe Bazan");
+        // Criando um objeto para cada classe Contas.Conta corrente, Contas.Conta poupança e Contas.Conta Contas.Selic
+        //Contas.Conta contaCorrente = new Contas.Conta("Felipe Bazan");
+       // Poupanca contaPoupanca = new Poupanca("Felipe Bazan");
+       // Selic contaSelic = new Selic("Felipe Bazan");
 
         Scanner scanner = new Scanner(System.in);
 
 
-        System.out.println("Digite 1 para entrar ou 2 para Sair");
+        /*System.out.println("Digite 1 para entrar ou 2 para Sair");
         int entraNoMenu = scanner.nextInt();
 
         if (entraNoMenu == 1) {
             while (true) {
 
                 System.out.println("Qual conta deseja entrar\n" +
-                        "1. Conta corrente\n" +
-                        "2. Conta Poupança\n" +
-                        "3. Conta Selic\n" +
+                        "1. Contas.Conta corrente\n" +
+                        "2. Contas.Conta Poupança\n" +
+                        "3. Contas.Conta Contas.Selic\n" +
                         "4. Para sair");
                 int entraMenuNasContas = scanner.nextInt();
 
@@ -108,6 +111,11 @@ public class Main {
         listaDeContas.add(contaPoupanca);
         listaDeContas.add(contaCorrente);
         System.out.println(listaDeContas);
+
+        EscreverArquivo novoArquivo = new EscreverArquivo();
+        novoArquivo.escreverContas(listaDeContas);*/
+
+
 
     }// Fechando o public statc void main
 }// Fechando a classe main

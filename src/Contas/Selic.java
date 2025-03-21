@@ -1,5 +1,6 @@
+package Contas;
 
-public class Selic extends Conta {
+public class Selic extends Contas.Conta {
 
 
     public Selic(String nome){
@@ -21,6 +22,6 @@ public class Selic extends Conta {
 
     @Override
     public String nomeDaConta() {
-        return "Conta Selic";
+        return "Contas.Conta Contas.Selic";
     }
 }

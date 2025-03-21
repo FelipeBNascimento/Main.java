@@ -1,4 +1,8 @@
+package Contas;
+
 public class Conta {
+
+
 
     private String nome;
     protected double saldo;
@@ -37,7 +41,7 @@ public class Conta {
         this.sacaValor = sacaValor;
     }
 
-    public void depositarValor(double valor){
+    public void depositarValor(double valor) {
         saldo += valor;
         System.out.println( "Valor depositado: " + valor + "deu certo valor depositado");
 
@@ -56,7 +60,7 @@ public class Conta {
 
     }
 
-    public void transferirValor(double valor,  Conta contaFinal){
+    public void transferirValor(double valor, Contas.Conta contaFinal){
 
         this.sacarValor(valor);
         contaFinal.depositarValor(valor);
@@ -75,7 +79,7 @@ public class Conta {
     }
 
     public String nomeDaConta(){
-        return "Conta Corrente ";
+        return "Contas.Conta Corrente ";
     }
 
     @Override

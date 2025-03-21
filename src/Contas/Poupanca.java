@@ -1,4 +1,6 @@
-public class Poupanca extends Conta {
+package Contas;
+
+public class Poupanca extends Contas.Conta {
 
 
     public Poupanca(String nome){
@@ -19,7 +21,7 @@ public class Poupanca extends Conta {
 
     @Override
     public String nomeDaConta() {
-        return "Conta Poupança";
+        return "Contas.Conta Poupança";
     }
 }
 
