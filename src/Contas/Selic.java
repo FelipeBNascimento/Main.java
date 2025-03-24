@@ -1,6 +1,6 @@
 package Contas;
 
-public class Selic extends Contas.Conta {
+public class Selic extends Conta {
 
 
     public Selic(String nome){
@@ -9,15 +9,16 @@ public class Selic extends Contas.Conta {
     }
 
     public double somenteRendimento() {
-        double rendimento  = getSaldo() * 0.010;
+       double rendimento  = getSaldo() * 0.010;
         return rendimento;
     }
 
 
     @Override
-    public double rendimento() {
-        this.saldo = getSaldo() + (getSaldo() * 0.010);
-        return this.saldo;
+    public void rendimento() {
+
+        setSaldo(getSaldo() * 0.007);
+
     }
 
     @Override

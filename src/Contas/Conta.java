@@ -2,12 +2,8 @@ package Contas;
 
 public class Conta {
 
-
-
     private String nome;
-    protected double saldo;
-    private double depositaValor;
-    private double sacaValor;
+    private double saldo;
 
 
     public Conta (String nome) {
@@ -20,73 +16,36 @@ public class Conta {
     public void setNome(String nome) {
         this.nome = nome;
     }
+
     public double getSaldo(){
-        return saldo;
+        return this.saldo;
     }
 
-
-    public double getDepositaValor() {
-        return depositaValor;
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
     }
 
-    public void setDepositaValor(double depositaValor) {
-        this.depositaValor = depositaValor;
-    }
-
-    public double getSacaValor() {
-        return sacaValor;
-    }
-
-    public void setSacaValor(double sacaValor) {
-        this.sacaValor = sacaValor;
-    }
-
-    public void depositarValor(double valor) {
-        saldo += valor;
-        System.out.println( "Valor depositado: " + valor + "deu certo valor depositado");
-
-    }
-
-    public void sacarValor(double valor){
-
-        if (valor <= saldo){
-            saldo -= valor;
-
-            System.out.println("Saque de " + valor + "\nRealizado com sucesso");
-
-        }else{
-            System.out.println("Valor indisponível.");
-        }
-
-    }
-
-    public void transferirValor(double valor, Contas.Conta contaFinal){
-
-        this.sacarValor(valor);
-        contaFinal.depositarValor(valor);
-
-
-    }
     public void mostrarinformacao(){
 
         System.out.println("Nome : " + nome +
                 " \nSaldo atual de " + saldo);
     }
 
-    public double rendimento(){
+    public void rendimento(){
 
-        return saldo;
+        System.out.println(getSaldo());
+
     }
 
     public String nomeDaConta(){
         return "Contas.Conta Corrente ";
     }
 
-    @Override
+    /*@Override
     public String toString() {
-        return "\n" + nomeDaConta() +  " \nNome: " + getNome() + " \nSaldo atualizado: " + rendimento() + " R$"  ;
+        return "\n" + nomeDaConta() +  " \nNome: " + getNome() + " \nSaldo atualizado: " + rendimento() + " R$"  ;*/
     }
-}
+//}
 
 
 

@@ -1,6 +1,6 @@
 package Contas;
 
-public class Poupanca extends Contas.Conta {
+public class Poupanca extends Conta {
 
 
     public Poupanca(String nome){
@@ -9,9 +9,9 @@ public class Poupanca extends Contas.Conta {
     }
 
     @Override
-    public double rendimento() {
-        this.saldo = getSaldo() + (getSaldo() * 0.007);
-        return getSaldo();
+    public void rendimento() {
+        
+       setSaldo(getSaldo() * 0.007);
     }
 
     public double somenteRendimento() {

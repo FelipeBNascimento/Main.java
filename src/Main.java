@@ -1,5 +1,6 @@
 import Contas.Poupanca;
 import Contas.Selic;
+import operacao.Operacoes;
 
 import java.util.Scanner;
 import java.util.ArrayList;
@@ -8,11 +9,23 @@ public class Main {
     public static void main(String[] args) {
 
         // Criando um objeto para cada classe Contas.Conta corrente, Contas.Conta poupança e Contas.Conta Contas.Selic
-        //Contas.Conta contaCorrente = new Contas.Conta("Felipe Bazan");
-       // Poupanca contaPoupanca = new Poupanca("Felipe Bazan");
-       // Selic contaSelic = new Selic("Felipe Bazan");
+       // Conta contaCorrente = new Conta("Felipe Bazan");
+        Poupanca contaPoupanca = new Poupanca("Felipe Bazan");
+        Selic contaSelic = new Selic("Felipe Bazan");
 
         Scanner scanner = new Scanner(System.in);
+
+        Operacoes operacoes = new Operacoes();
+
+        contaSelic.mostrarinformacao();
+        operacoes.depositarValor(contaSelic);
+        contaPoupanca.mostrarinformacao();
+        operacoes.transferirValor(contaSelic, contaPoupanca);
+        contaSelic.mostrarinformacao();
+        contaPoupanca.mostrarinformacao();
+
+
+
 
 
         /*System.out.println("Digite 1 para entrar ou 2 para Sair");
